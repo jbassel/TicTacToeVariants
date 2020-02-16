@@ -48,7 +48,6 @@ public class MainActivity3  extends AppCompatActivity implements View.OnClickLis
 
             text2.setText("It is O's turn");
             count2++;
-
             for (int id : Button_IDS) {
                 ImageButton button = findViewById(id);
                 button.setOnClickListener(this);
