@@ -163,69 +163,69 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         text3.setOnClickListener(this);
 
         SharedPreferences sp = getSharedPreferences("textkey", 0);
-        SharedPreferences.Editor sedt = sp.edit();
+        SharedPreferences.Editor edit1 = sp.edit();
 
         SharedPreferences sp2 = getSharedPreferences("textkey2", 0);
-        SharedPreferences.Editor sedt2 = sp2.edit();
+        SharedPreferences.Editor edit2 = sp2.edit();
 
         SharedPreferences sp3 = getSharedPreferences("textkey3", 0);
-        SharedPreferences.Editor sedt3 = sp3.edit();
+        SharedPreferences.Editor edit3 = sp3.edit();
 
         SharedPreferences sp4 = getSharedPreferences("winkey1", 0);
-        SharedPreferences.Editor sedt4 = sp4.edit();
+        SharedPreferences.Editor edit4 = sp4.edit();
 
         SharedPreferences sp5 = getSharedPreferences("winkey2", 0);
-        SharedPreferences.Editor sedt5 = sp5.edit();
+        SharedPreferences.Editor edit5 = sp5.edit();
 
         SharedPreferences sp6 = getSharedPreferences("winkey3", 0);
-        SharedPreferences.Editor sedt6 = sp6.edit();
+        SharedPreferences.Editor edit6 = sp6.edit();
 
         SharedPreferences sp7 = getSharedPreferences("winkey4", 0);
-        SharedPreferences.Editor sedt7 = sp7.edit();
+        SharedPreferences.Editor edit7 = sp7.edit();
 
         SharedPreferences sp8 = getSharedPreferences("winkey5", 0);
-        SharedPreferences.Editor sedt8 = sp8.edit();
+        SharedPreferences.Editor edit8 = sp8.edit();
 
         SharedPreferences sp9 = getSharedPreferences("winkey6", 0);
-        SharedPreferences.Editor sedt9 = sp9.edit();
+        SharedPreferences.Editor edit9 = sp9.edit();
 
         SharedPreferences sp10 = getSharedPreferences("winkey7", 0);
-        SharedPreferences.Editor sedt10 = sp10.edit();
+        SharedPreferences.Editor edit10 = sp10.edit();
 
         SharedPreferences sp11 = getSharedPreferences("winkey8", 0);
-        SharedPreferences.Editor sedt11 = sp11.edit();
+        SharedPreferences.Editor edit11 = sp11.edit();
 
         SharedPreferences sp12 = getSharedPreferences("winkey9", 0);
-        SharedPreferences.Editor sedt12 = sp12.edit();
+        SharedPreferences.Editor edit12 = sp12.edit();
 
-        sedt.putString("text1", text1.getText().toString());
-        sedt2.putString("text2", text2.getText().toString());
-        sedt3.putString("text3", text3.getText().toString());
-        sedt4.putInt("a1", a1);
-        sedt5.putInt("a2", a2);
-        sedt6.putInt("a3", a3);
-        sedt7.putInt("a4", a4);
-        sedt8.putInt("a5", a5);
-        sedt9.putInt("a6", a6);
-        sedt10.putInt("a7", a7);
-        sedt11.putInt("a8", a8);
-        sedt12.putInt("a9", a9);
-
-
+        edit1.putString("text1", text1.getText().toString());
+        edit2.putString("text2", text2.getText().toString());
+        edit3.putString("text3", text3.getText().toString());
+        edit4.putInt("a1", a1);
+        edit5.putInt("a2", a2);
+        edit6.putInt("a3", a3);
+        edit7.putInt("a4", a4);
+        edit8.putInt("a5", a5);
+        edit9.putInt("a6", a6);
+        edit10.putInt("a7", a7);
+        edit11.putInt("a8", a8);
+        edit12.putInt("a9", a9);
 
 
-        sedt.commit();
-        sedt2.commit();
-        sedt3.commit();
-        sedt4.commit();
-        sedt5.commit();
-        sedt6.commit();
-        sedt7.commit();
-        sedt8.commit();
-        sedt9.commit();
-        sedt10.commit();
-        sedt11.commit();
-        sedt12.commit();
+
+
+        edit1.commit();
+        edit2.commit();
+        edit3.commit();
+        edit4.commit();
+        edit5.commit();
+        edit6.commit();
+        edit7.commit();
+        edit8.commit();
+        edit9.commit();
+        edit10.commit();
+        edit11.commit();
+        edit12.commit();
 
 
     }
