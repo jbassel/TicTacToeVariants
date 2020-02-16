@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+            <action android:name=":android.intent.action.MAIN" />
+            <action android:name="android.intent.action.VIEW" />
 
+            <category android:name="android.intent.category.DEFAULT" />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,7 +36,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            android:screenOrientation="portrait"
         </activity>
     </application>
 
