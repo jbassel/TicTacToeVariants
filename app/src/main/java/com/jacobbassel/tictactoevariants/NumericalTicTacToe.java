@@ -6,8 +6,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -16,8 +14,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.content.Intent;
-
-import org.w3c.dom.Text;
 
 import static java.lang.Integer.parseInt;
 
@@ -39,8 +35,6 @@ public class NumericalTicTacToe extends AppCompatActivity
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.numerical_tic_tac_toe);
-
-        TextView textView = findViewById(R.id.textView);
 
         ImageButton ib1 = findViewById(R.id.imageButton1a);
         ImageButton ib2 = findViewById(R.id.imageButton2a);
@@ -254,12 +248,6 @@ public class NumericalTicTacToe extends AppCompatActivity
         editor.putString("tv", tv.getText().toString());
 
         editor.commit();
-
-        Log.i("Here!!!", "The value ib1 is " + sp.getInt("ib1", -1));
-        Log.i("Here!!!", "The value ib2 is " + sp.getInt("ib2", -1));
-        Log.i("Here!!!", "The value ib3 is " + sp.getInt("ib3", -1));
-        Log.i("Here!!!", "The value ib4 is " + sp.getInt("ib4", -1));
-        Log.i("Here!!!", "The value ib5 is " + sp.getInt("ib5", -1));
     }
 
     @Override
@@ -334,7 +322,6 @@ public class NumericalTicTacToe extends AppCompatActivity
     private void testWin(){
         Button play = findViewById(R.id.buttonPlay);
         Button menu = findViewById(R.id.buttonMenu);
-        Button instructions = findViewById(R.id.buttonInstruction);
         TextView tv = findViewById(R.id.textView);
         if((sq1+sq2+sq3==15)&&(tv.getText().equals("Odd's turn!"))){
             tv.setText("Even has won!!");
@@ -438,17 +425,6 @@ public class NumericalTicTacToe extends AppCompatActivity
         RadioButton rb8 = findViewById(R.id.radioButton8);
         RadioButton rb9 = findViewById(R.id.radioButton9);
 
-        ImageButton ib1 = findViewById(R.id.imageButton1a);
-        ImageButton ib2 = findViewById(R.id.imageButton2a);
-        ImageButton ib3 = findViewById(R.id.imageButton3);
-        ImageButton ib4 = findViewById(R.id.imageButton4);
-        ImageButton ib5 = findViewById(R.id.imageButton5);
-        ImageButton ib6 = findViewById(R.id.imageButton6);
-        ImageButton ib7 = findViewById(R.id.imageButton7);
-        ImageButton ib8 = findViewById(R.id.imageButton8);
-        ImageButton ib9 = findViewById(R.id.imageButton9);
-
-
         TextView tv = findViewById(R.id.textView);
 
         //Does not execute if a player has already won
@@ -458,7 +434,6 @@ public class NumericalTicTacToe extends AppCompatActivity
         else if(rb1.isChecked() && tv.getText().equals("Odd's turn!") && parseInt(view.getTag().toString()) == -1){
             ((ImageButton) view).setImageResource(R.drawable.n1);
             view.setTag(R.drawable.n1);
-            Log.i("Look!", "The tag was set to " + R.drawable.n1);
             value = 1;
             tv.setText("Even's turn!");
             rb1.toggle();
