@@ -304,6 +304,7 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
         winners.add(8, a9);
 
         for (int thing : winners) {
+            if(a>8){return;}//Fixes fatal error that when activity is exited but not destroyed
             if (thing == 0) {
                 ImageButton box1 = findViewById(Button_IDS[a]);
                 box1.setImageResource(R.drawable.download);

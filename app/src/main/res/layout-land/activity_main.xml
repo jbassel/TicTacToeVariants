@@ -24,8 +24,6 @@
         android:layout_height="260dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/background5" />
@@ -35,10 +33,9 @@
         android:layout_width="298dp"
         android:layout_height="50dp"
         android:layout_marginTop="204dp"
+        android:layout_marginEnd="50dp"
         android:text="In Misere Tic-Tac-Toe, one Player places an X while the other places an O.  The rules are that O must not prevent X from getting 3 in a row.  If O prevents this, they win.  If they do not, X wins."
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -66,29 +63,26 @@
         android:layout_width="174dp"
         android:layout_height="54dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
         android:text="Misere Tic-Tac-Toe"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image1" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="425dp"
-        android:layout_height="260dp"
+        android:layout_width="349dp"
+        android:layout_height="216dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
         app:srcCompat="@drawable/background6" />
 
     <Button
         android:id="@+id/buttonNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:text="Numerical Tic-Tac-Toe"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
@@ -96,9 +90,9 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
         android:text="Instructions can be found in-game"
         app:layout_constraintBottom_toTopOf="@+id/buttonNum"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 

@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button button2 = findViewById(R.id.button6);
         button2.setOnClickListener(this);
 
+        Button buttonNum = findViewById(R.id.buttonNum);
+        buttonNum.setOnClickListener(this);
+
 
         }
 
@@ -34,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         Button button2 = findViewById(R.id.button6);
         button2.setOnClickListener(this);
+
 
         TextView text1 = findViewById(R.id.textView4);
         text1.setOnClickListener(this);
@@ -55,6 +59,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             startActivity(new Intent(MainActivity.this, MainActivity3.class));
         }
+        else if (v.getId() == R.id.buttonNum)
+            startActivity(new Intent(this, NumericalTicTacToe.class));
 
 
 

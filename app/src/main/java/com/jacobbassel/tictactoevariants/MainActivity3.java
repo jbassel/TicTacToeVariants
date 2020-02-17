@@ -1,5 +1,6 @@
 package com.jacobbassel.tictactoevariants;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -9,6 +10,8 @@ import android.widget.TextView;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
 
 
 public class MainActivity3  extends AppCompatActivity implements View.OnClickListener {
@@ -52,6 +55,52 @@ public class MainActivity3  extends AppCompatActivity implements View.OnClickLis
                 ImageButton button = findViewById(id);
                 button.setOnClickListener(this);
                 button.setImageResource(R.drawable.download);
+            }
+        }
+
+        @Override
+        public void onPause(){
+            super.onPause();
+            SharedPreferences sp = getSharedPreferences("MyPref1", 0);
+            SharedPreferences.Editor editor = sp.edit();
+
+            TextView tv = findViewById(R.id.textView2);
+
+            for(int i=0; i<9; i++){ editor.putInt("win" + i, wins[i]); }
+            editor.putString("tv", tv.getText().toString());
+            editor.commit();
+        }
+
+        @Override
+        public void onResume(){
+            super.onResume();
+            ArrayList<Integer> winners = new ArrayList<Integer>(0);
+            winners.clear();
+            SharedPreferences sp = getSharedPreferences("MyPref1", 0);
+
+            for (int i =0; i<9 ; i++){
+                wins[i] = sp.getInt("win"+i, wins[i]);
+            }
+            for (int i =0; i<9 ; i++){
+                winners.add(i, wins[i]);
+            }
+
+            for (int winner : winners) {
+                if(a>8){return;}//Fixes fatal error that when activity is exited but not destroyed
+                if (winner == 0) {
+                    ImageButton box1 = findViewById(Button_IDS[a]);
+                    box1.setImageResource(R.drawable.download);
+                    wins[a] = 0;
+                } else if (winner == 1) {
+                    ImageButton box1 = findViewById(Button_IDS[a]);
+                    box1.setImageResource(R.drawable.letterx);
+                    wins[a] = 1;
+                } else {
+                    ImageButton box1 = findViewById(Button_IDS[a]);
+                    box1.setImageResource(R.drawable.lettero);
+                    wins[a] = 2;
+                }
+                a++;
             }
         }
 
